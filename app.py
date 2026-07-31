@@ -3343,12 +3343,12 @@ def create_app(
                 {"ok": false, "message": "Transcription is empty"}, status_code=400
             )
 
-        target_url = "http://0.0.0.0:8020/post"
+        target_url = "http://127.0.0.1:8020/post"
 
         outgoing_request = urllib.request.Request(
             target_url,
             data=text.encode("utf-8"),
-            headers={"content-type": "text/plain, charset=utf-8"},
+            headers={"Content-Type": "text/plain, charset=utf-8"},
             method="POST",
         )
 
